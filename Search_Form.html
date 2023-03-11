@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bet Search Form</title>
+</head>
+<body>
+    <h1>Bet Search Form</h1>
+    <form th:action="@{/}" method="post" th:object="${bet}">
+        <label for="game">Game:</label>
+        <input type="text" id="game" name="game" th:field="*{game}" />
+        <br />
+        <label for="clientId">Client ID:</label>
+        <input type="text" id="clientId" name="clientId" th:field="*{clientId}" />
+        <br />
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" th:field="*{date}" />
+        <br />
+        <input type="submit" value="Search" />
+    </form>
+</body>
+</html>

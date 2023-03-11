@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bet Search Results</title>
+</head>
+<body>
+    <h1>Bet Search Results</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Game</th>
+                <th>Client ID</th>
+                <th>Date</th>
+                <th>Bet Amount</th>
+                <th>Returns</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="bet : ${bets}">
+                <td th:text="${bet.id}"></td>
+                <td th:text="${bet.game}"></td>
+                <td th:text="${bet.clientId}"></td>
+                <td th:text="${bet.date}"></td>
+                <td th:text="${bet.betAmount}"></td>
+                <td th:text="${bet.returns}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
